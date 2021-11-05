@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ocu.es/xsd/SincronizarMatMov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.ocu.es/xsd/SincronizarMatMov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ocu.es/xsd/SincronizarMatMov">
+      <s:element name="sincronizarMatMovRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMatricula" type="tns:T_TIPO_MATRICULA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="T_TIPO_MATRICULA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoRegistro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigoPersona" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombrePersona" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidosPersona" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoProvinciaDom" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombreProvinciaDom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoMunicipioDom" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombreMunicipioDom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccionDom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefonoFijoDom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefonoMovil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoPaisNacimiento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="periodoAcademico" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="actividadEconomica" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="periodoActividad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoPlanEstudios" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroOrdenExpediente" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoMovimiento" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoEstudio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaUltimaModificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoPago" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoSistemaFinanciacion" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="importeMatMov" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="importeSistemaFinanciacion" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="importeRecargos" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoAnulacion" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaAnulacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaDesanulacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="centroCoste" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordenCUC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoCurso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaInicioImparticion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaFinImparticion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="desglosesMatMov" type="tns:ArrayOfT_TIPO_DESGLOSE" />
+          <s:element minOccurs="0" maxOccurs="1" name="recibosMatMov" type="tns:ArrayOfT_TIPO_RECIBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfT_TIPO_DESGLOSE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tiposDesglose" type="tns:T_TIPO_DESGLOSE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="T_TIPO_DESGLOSE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tipoConcepto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigoConcepto" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombreConcepto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="importeConcepto" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfT_TIPO_RECIBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tiposRecibo" type="tns:T_TIPO_RECIBO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="T_TIPO_RECIBO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="referenciaRecibo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaEmision" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImportePagoOportuno" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaPagoOportunoHasta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="importePago1" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaPago1Hasta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="importePago2" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaPago2Hasta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="importePago3" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaPago3Hasta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoSistemaFinanciacion" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="importeSistemaFinanciacion" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="plazoPago" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigoFormaPago" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="esCobrado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaCobro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="importeCobrado" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="modoCobro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estadoSolicitudDevolucion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoBancoIngreso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="entidadPagadora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="esPagoOnLine" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdOperacionBancariaOnLine" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="recibosCompensacion" type="tns:ArrayOfT_TIPO_RECIBO_COMPENSACION" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfT_TIPO_RECIBO_COMPENSACION">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tiposReciboCompensacion" type="tns:T_TIPO_RECIBO_COMPENSACION" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="T_TIPO_RECIBO_COMPENSACION">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="referenciaReciboCompensado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="importeReciboCompensado" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaCobroReciboCompensado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoCompensacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="importeCobradoCompensado" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="modoCobroCompensado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoBancoIngresoCompensado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="entidadPagadoraCompensado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="sincronizarMatMovRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sincronizarMatMovRequestResult" type="tns:SincMatMovResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SincMatMovResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoRegistro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigoRespuesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="sincronizarMatMovRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:sincronizarMatMovRequest" />
+  </wsdl:message>
+  <wsdl:message name="sincronizarMatMovRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:sincronizarMatMovRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SincMatMovPSSoap">
+    <wsdl:operation name="sincronizarMatMovRequest">
+      <wsdl:input message="tns:sincronizarMatMovRequestSoapIn" />
+      <wsdl:output message="tns:sincronizarMatMovRequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SincMatMovPSSoap" type="tns:SincMatMovPSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sincronizarMatMovRequest">
+      <soap:operation soapAction="http://www.ocu.es/xsd/SincronizarMatMov/sincronizarMatMovRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SincMatMovPSSoap12" type="tns:SincMatMovPSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sincronizarMatMovRequest">
+      <soap12:operation soapAction="http://www.ocu.es/xsd/SincronizarMatMov/sincronizarMatMovRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SincMatMovPS">
+    <wsdl:port name="SincMatMovPSSoap" binding="tns:SincMatMovPSSoap">
+      <soap:address location="http://localhost/WSFAPIUNI/SincMatMovPS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SincMatMovPSSoap12" binding="tns:SincMatMovPSSoap12">
+      <soap12:address location="http://localhost/WSFAPIUNI/SincMatMovPS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

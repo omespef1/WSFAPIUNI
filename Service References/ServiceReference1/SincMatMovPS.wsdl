@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.ocu.es/xsd/SincronizarMatMov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/SincMatMovPS/" name="SincMatMovPS" targetNamespace="http://www.example.org/SincMatMovPS/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="../XML/XSD/TipoMatricula.xsd" namespace="http://www.ocu.es/xsd/SincronizarMatMov" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SincMatMovRequest">
+    <wsdl:part name="parameters" element="xsd1:sincronizarMatMovRequest" />
+  </wsdl:message>
+  <wsdl:message name="SincMatMovResponse">
+    <wsdl:part name="parameters" element="xsd1:sincronizarMatMovResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SincMatMovPS">
+    <wsdl:operation name="SincMatMov">
+      <wsdl:input message="tns:SincMatMovRequest" />
+      <wsdl:output message="tns:SincMatMovResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SincMatMovPSSOAP" type="tns:SincMatMovPS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SincMatMov">
+      <soap:operation soapAction="http://www.example.org/SincMatMovPS/SincMatMov" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SincMatMovPS">
+    <wsdl:port name="SincMatMovPSSOAP" binding="tns:SincMatMovPSSOAP">
+      <soap:address location="http://www.example.org/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

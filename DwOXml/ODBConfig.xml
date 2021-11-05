@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Parametros xmlns:xlink="http://www.w3.org/1999/xlink">
+  <Parametro>
+    <!--<connectionString>Server=cerezo;User ID=Desarrollo;Password=Desarrollo2018;Database=SevenDesarrollo;App=WFAPIUNI;</connectionString>
+    <providerName>SQL</providerName>-->
+
+    <!--<connectionString>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=CALIDAD)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=CALIDAD)));User Id=SVN_CAJASAN;Password=cajasan;</connectionString>
+	  <providerName>ORA</providerName>
+	  <providerName>System.Data.OracleClient</providerName>
+  
+	  <connectionString>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=CALIDAD)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=CALIDAD)));User Id=COMERSAN;Password=SEVEN;</connectionString>
+	  <providerName>ORA</providerName>
+	  <providerName>System.Data.OracleClient</providerName>-->
+    <!--<connectionString>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=TESTINGS)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=CALIDAD)));User Id=Testing;Password=SISTEMAS16;</connectionString>
+    <providerName>ORA</providerName>
+    <providerName>System.Data.OracleClient</providerName >-->
+    <!--Conexion con archivo tns -->
+    <!--<connectionString>Data Source=CALIDAD;User Id=COMERSAN;Password=SEVEN;</connectionString>
+	  <providerName>ORA</providerName>
+	  <providerName>System.Data.OracleClient</providerName>-->
+    <!--<connectionString>Server=10.10.1.111;User ID=sa;Password=pruebas2011;Database=seven;App=WFAPIUNI;</connectionString>-->
+    <!--<connectionString>Server=PRDD-KBD\DB_KACTUS;User ID=sa;Password=3Edc5tgb;Database=seven;</connectionString>-->
+    <!--<connectionString>Server=10.10.1.111;User ID=sa;Password=pruebas2011;Database=Seven;App=WFAPIUNI;</connectionString>-->
+    <connectionString>Server=SQL2014S,57223;User ID=sevendesarrollo;Password=Sistemas21;Database=sevendesarrollo;App=WFAPIUNI;</connectionString>
+    <providerName>SQL</providerName>
+
+    <!--<connectionString>Server=sql2014\sevendc;User ID=consultoria;Password=Sistemas15;Database=replicas;App=WFAPIUNI;</connectionString>
+    <providerName>SQL</providerName>-->
+    <!--<connectionString>Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=TESTINGS)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=CALIDAD)));User Id=Testing;Password=SISTEMAS16;</connectionString>
+    <providerName>ORA</providerName>-->
+    <!--<connectionString>Data Source=SEVENDC;User Id=REPLICAS;Password=Sistemas15</connectionString>
+    <providerName>ORA</providerName>-->
+    <!--<connectionString>Data Source=PRU7;User Id=SEVEN;Password=curubo2017;</connectionString>
+    <providerName>ORA</providerName>-->
+    <!--U-LIBRE-->
+    <!--<connectionString>Data Source=PRU7;User Id=SEVEN;Password=curubo2017;</connectionString>
+    <providerName>ORA</providerName>-->
+  </Parametro>
+</Parametros>

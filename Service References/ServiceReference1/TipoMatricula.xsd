@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.ocu.es/xsd/SincronizarMatMov" elementFormDefault="qualified" targetNamespace="http://www.ocu.es/xsd/SincronizarMatMov" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="T_TIPO_DESGLOSE">
+    <xs:sequence minOccurs="0">
+      <xs:element name="tipoConcepto" type="xs:string" />
+      <xs:element name="codigoConcepto" type="xs:int" />
+      <xs:element name="nombreConcepto" type="xs:string" />
+      <xs:element name="importeConcepto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_TIPO_RECIBO_COMPENSACION">
+    <xs:sequence minOccurs="0">
+      <xs:element name="referenciaReciboCompensado" type="xs:string" />
+      <xs:element name="importeReciboCompensado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="fechaCobroReciboCompensado" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCompensacion" type="xs:string" />
+      <xs:element minOccurs="0" name="importeCobradoCompensado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="modoCobroCompensado" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoBancoIngresoCompensado" type="xs:string" />
+      <xs:element minOccurs="0" name="entidadPagadoraCompensado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_TIPO_RECIBO">
+    <xs:sequence minOccurs="0">
+      <xs:element name="referenciaRecibo" type="xs:string" />
+      <xs:element name="fechaEmision" type="xs:string" />
+      <xs:element name="ImportePagoOportuno" type="xs:decimal" />
+      <xs:element name="fechaPagoOportunoHasta" type="xs:string" />
+      <xs:element minOccurs="0" name="importePago1" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="fechaPago1Hasta" type="xs:string" />
+      <xs:element minOccurs="0" name="importePago2" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="fechaPago2Hasta" type="xs:string" />
+      <xs:element minOccurs="0" name="importePago3" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="fechaPago3Hasta" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoSistemaFinanciacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="importeSistemaFinanciacion" nillable="true" type="xs:decimal" />
+      <xs:element name="plazoPago" type="xs:int" />
+      <xs:element name="codigoFormaPago" type="xs:int" />
+      <xs:element name="esCobrado" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCobro" type="xs:string" />
+      <xs:element minOccurs="0" name="importeCobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="modoCobro" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoSolicitudDevolucion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoBancoIngreso" type="xs:string" />
+      <xs:element minOccurs="0" name="entidadPagadora" type="xs:string" />
+      <xs:element name="esPagoOnLine" type="xs:string" />
+      <xs:element minOccurs="0" name="IdOperacionBancariaOnLine" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recibosCompensacion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="tiposReciboCompensacion" type="tns:T_TIPO_RECIBO_COMPENSACION" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_TIPO_MATRICULA">
+    <xs:sequence>
+      <xs:element name="codigoRegistro" type="xs:int" />
+      <xs:element name="codigoPersona" type="xs:int" />
+      <xs:element name="tipoDocumento" type="xs:string" />
+      <xs:element name="numDocumento" type="xs:string" />
+      <xs:element name="nombrePersona" type="xs:string" />
+      <xs:element name="apellidosPersona" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoProvinciaDom" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreProvinciaDom" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoMunicipioDom" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreMunicipioDom" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionDom" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoFijoDom" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoMovil" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoPaisNacimiento" type="xs:string" />
+      <xs:element name="periodoAcademico" type="xs:string" />
+      <xs:element name="actividadEconomica" type="xs:int" />
+      <xs:element name="periodoActividad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigoPlanEstudios" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroOrdenExpediente" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codigoMovimiento" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codigoEstudio" type="xs:string" />
+      <xs:element name="fechaUltimaModificacion" type="xs:string" />
+      <xs:element name="tipoPago" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoSistemaFinanciacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="importeMatMov" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="importeSistemaFinanciacion" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="importeRecargos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codigoAnulacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaAnulacion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaDesanulacion" type="xs:string" />
+      <xs:element minOccurs="0" name="centroCoste" type="xs:string" />
+      <xs:element minOccurs="0" name="ordenCUC" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCurso" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaInicioImparticion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFinImparticion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="desglosesMatMov">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="tiposDesglose" type="tns:T_TIPO_DESGLOSE" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recibosMatMov">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="tiposRecibo" type="tns:T_TIPO_RECIBO" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sincronizarMatMovRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tipoMatricula" type="tns:T_TIPO_MATRICULA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sincronizarMatMovResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codigoRegistro" type="xs:int" />
+        <xs:element name="codigoRespuesta" type="xs:int" />
+        <xs:element minOccurs="0" name="mensajeRespuesta" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

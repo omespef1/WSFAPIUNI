@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://seven/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://seven/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://seven/">
+      <s:element name="SyncGnTerce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ter_dive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_nomb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_apel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_noco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mod_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pai_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dep_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mun_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_dire" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_ntel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_nfax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_audp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncGnTerceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncGnTerceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncFaClien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cli_dive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_nomb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_apel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_noco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mod_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pai_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dep_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mun_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tcl_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cal_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="coc_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cim_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_dire" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_ntel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_nfax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_clte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_inna" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ven_codi" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_ccec" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lis_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_obse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_apar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcl_cloc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_anex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_hpra" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cli_fecm" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cli_feca" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_audp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncFaClienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncFaClienResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncFaClienComplex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="toFaClient" type="tns:TOFaClien" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TOFaClien">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ter_coda" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cli_dive" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_nomb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_apel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_noco" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mod_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="pai_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dep_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="mun_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tcl_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cal_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="coc_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cim_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_dire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_ntel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_mail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_nfax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_clte" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_inna" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ven_codi" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_ccec" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lis_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_obse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_apar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dcl_cloc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_anex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_hpra" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cli_fecm" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cli_feca" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_audp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_cpro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_care" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="act_codi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_esta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cas_cont" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ase_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cob_cont" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SyncFaClienComplexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncFaClienComplexResult" type="tns:TSalida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSalida">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Retorno" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TxtError" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CliCodi" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DclCodd" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SyncPoPvdor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvd_dive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_nomb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_apel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_noco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pai_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dep_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mun_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_clad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cal_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="coc_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cim_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="act_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mon_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_nume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_idba" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ban_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sub_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvr_riva" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvr_auto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvr_reau" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_tdba" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_tcta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib04" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib05" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib06" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib07" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib08" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib09" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_ib10" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_dire" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_ntel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_mail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dep_codd" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_numi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_nomi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ban_coin" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ban_dire" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_coab" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_coib" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_coas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_cobi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_clas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_apar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_nfax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_cloc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_nomb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_esta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_audp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_moin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_mrpu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_serp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ite_codi_cope" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncPoPvdorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncPoPvdorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncPoPvdorComplex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="popvdor" type="tns:TOPoPvdorComplex" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TOPoPvdorComplex">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ite_codi_cope" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_coda" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pvd_dive" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_nomb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_apel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_noco" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pai_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dep_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="mun_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tpr_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_clad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cal_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="coc_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cim_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="act_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="mon_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_nume" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_idba" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ban_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="sub_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvr_riva" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvr_auto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvr_reau" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_tdba" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_tcta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib05" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib06" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib07" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib08" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib09" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_ib10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_dire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_ntel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_mail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dep_codd" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_numi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_nomi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ban_coin" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ban_dire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_coab" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_coib" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_coas" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_cobi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_clas" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_apar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_nfax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_cloc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dep_nomb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cup_esta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_audp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_moin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_mrpu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_serp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvr_esta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_nmat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_cate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pvd_claf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="arb_codi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ite_cope" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cas_cont" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SyncPoPvdorComplexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncPoPvdorComplexResult" type="tns:TOtransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TOtransaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="retorno" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="txtError" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pvd_codd" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SyncFaConta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dcl_codd" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="con_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_nomb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_carg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_dire" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_dibo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_tele" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_nufa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_mail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="con_fcum" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="con_afic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncFaContaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncFaContaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncEmpleadoPvdor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvd_dive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_nomb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_apel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvd_noco" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pai_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dep_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mun_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_nume" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ban_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sub_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cup_tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_dire" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_ntel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_mail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncEmpleadoPvdorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncEmpleadoPvdorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeNit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_coda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_codn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_codn" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeNitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeNitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeNitOpc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_coda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ter_codn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_codn" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tip_coda" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeNitOpcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeNitOpcResult" type="tns:TOTransactNit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TOTransactNit">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RETORNO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TXTERROR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActModalidadCupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_codc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ite_moda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dcl_cupo" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActModalidadCupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActModalidadCupoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActModalidadCupoS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_codc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ite_moda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dcl_cupo" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_cods" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActModalidadCupoSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActModalidadCupoSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActEstadoCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="toFaClienAct" type="tns:TOFaClienAct" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TOFaClienAct">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tip_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cli_esta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActEstadoClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActEstadoClienteResult" type="tns:TOTransactNit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="TOTransactNit" nillable="true" type="tns:TOTransactNit" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SyncGnTerceSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncGnTerce" />
+  </wsdl:message>
+  <wsdl:message name="SyncGnTerceSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncGnTerceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncFaClien" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncFaClienResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienComplexSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncFaClienComplex" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienComplexSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncFaClienComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncPoPvdor" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncPoPvdorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorComplexSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncPoPvdorComplex" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorComplexSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncPoPvdorComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaContaSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncFaConta" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaContaSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncFaContaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncEmpleadoPvdorSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncEmpleadoPvdor" />
+  </wsdl:message>
+  <wsdl:message name="SyncEmpleadoPvdorSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncEmpleadoPvdorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeNit" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeNitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitOpcSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeNitOpc" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitOpcSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeNitOpcResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActModalidadCupo" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActModalidadCupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSSoapIn">
+    <wsdl:part name="parameters" element="tns:ActModalidadCupoS" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSSoapOut">
+    <wsdl:part name="parameters" element="tns:ActModalidadCupoSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActEstadoClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ActEstadoCliente" />
+  </wsdl:message>
+  <wsdl:message name="ActEstadoClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ActEstadoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncGnTerceHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="ter_dive" type="s:string" />
+    <wsdl:part name="ter_nomb" type="s:string" />
+    <wsdl:part name="ter_apel" type="s:string" />
+    <wsdl:part name="ter_noco" type="s:string" />
+    <wsdl:part name="mod_codi" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="ter_dire" type="s:string" />
+    <wsdl:part name="ter_ntel" type="s:string" />
+    <wsdl:part name="ter_mail" type="s:string" />
+    <wsdl:part name="ter_nfax" type="s:string" />
+    <wsdl:part name="ter_audp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncGnTerceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="cli_dive" type="s:string" />
+    <wsdl:part name="cli_nomb" type="s:string" />
+    <wsdl:part name="cli_apel" type="s:string" />
+    <wsdl:part name="cli_noco" type="s:string" />
+    <wsdl:part name="mod_codi" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="tcl_codi" type="s:string" />
+    <wsdl:part name="cal_codi" type="s:string" />
+    <wsdl:part name="coc_codi" type="s:string" />
+    <wsdl:part name="cim_codi" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="dcl_dire" type="s:string" />
+    <wsdl:part name="dcl_ntel" type="s:string" />
+    <wsdl:part name="dcl_mail" type="s:string" />
+    <wsdl:part name="dcl_nfax" type="s:string" />
+    <wsdl:part name="arb_clte" type="s:string" />
+    <wsdl:part name="cli_inna" type="s:string" />
+    <wsdl:part name="ven_codi" type="s:string" />
+    <wsdl:part name="arb_ccec" type="s:string" />
+    <wsdl:part name="lis_codi" type="s:string" />
+    <wsdl:part name="dcl_obse" type="s:string" />
+    <wsdl:part name="dcl_apar" type="s:string" />
+    <wsdl:part name="dcl_cloc" type="s:string" />
+    <wsdl:part name="cli_anex" type="s:string" />
+    <wsdl:part name="cli_hpra" type="s:string" />
+    <wsdl:part name="cli_fecm" type="s:string" />
+    <wsdl:part name="cli_feca" type="s:string" />
+    <wsdl:part name="cli_audp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="pvd_coda" type="s:string" />
+    <wsdl:part name="pvd_dive" type="s:string" />
+    <wsdl:part name="pvd_nomb" type="s:string" />
+    <wsdl:part name="pvd_apel" type="s:string" />
+    <wsdl:part name="pvd_noco" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="tpr_codi" type="s:string" />
+    <wsdl:part name="pvd_clad" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="cal_codi" type="s:string" />
+    <wsdl:part name="coc_codi" type="s:string" />
+    <wsdl:part name="cim_codi" type="s:string" />
+    <wsdl:part name="act_codi" type="s:string" />
+    <wsdl:part name="mon_codi" type="s:string" />
+    <wsdl:part name="cup_nume" type="s:string" />
+    <wsdl:part name="cup_idba" type="s:string" />
+    <wsdl:part name="ban_codi" type="s:string" />
+    <wsdl:part name="sub_codi" type="s:string" />
+    <wsdl:part name="cup_tipo" type="s:string" />
+    <wsdl:part name="pvr_riva" type="s:string" />
+    <wsdl:part name="pvr_auto" type="s:string" />
+    <wsdl:part name="pvr_reau" type="s:string" />
+    <wsdl:part name="cup_tdba" type="s:string" />
+    <wsdl:part name="cup_tcta" type="s:string" />
+    <wsdl:part name="cup_ib04" type="s:string" />
+    <wsdl:part name="cup_ib05" type="s:string" />
+    <wsdl:part name="cup_ib06" type="s:string" />
+    <wsdl:part name="cup_ib07" type="s:string" />
+    <wsdl:part name="cup_ib08" type="s:string" />
+    <wsdl:part name="cup_ib09" type="s:string" />
+    <wsdl:part name="cup_ib10" type="s:string" />
+    <wsdl:part name="dep_dire" type="s:string" />
+    <wsdl:part name="dep_ntel" type="s:string" />
+    <wsdl:part name="dep_mail" type="s:string" />
+    <wsdl:part name="dep_codd" type="s:string" />
+    <wsdl:part name="cup_numi" type="s:string" />
+    <wsdl:part name="cup_nomi" type="s:string" />
+    <wsdl:part name="ban_coin" type="s:string" />
+    <wsdl:part name="ban_dire" type="s:string" />
+    <wsdl:part name="cup_coab" type="s:string" />
+    <wsdl:part name="cup_coib" type="s:string" />
+    <wsdl:part name="cup_coas" type="s:string" />
+    <wsdl:part name="cup_cobi" type="s:string" />
+    <wsdl:part name="cup_clas" type="s:string" />
+    <wsdl:part name="dep_apar" type="s:string" />
+    <wsdl:part name="dep_nfax" type="s:string" />
+    <wsdl:part name="dep_cloc" type="s:string" />
+    <wsdl:part name="dep_nomb" type="s:string" />
+    <wsdl:part name="cup_esta" type="s:string" />
+    <wsdl:part name="pvd_audp" type="s:string" />
+    <wsdl:part name="pvd_moin" type="s:string" />
+    <wsdl:part name="pvd_mrpu" type="s:string" />
+    <wsdl:part name="pvd_serp" type="s:string" />
+    <wsdl:part name="ite_codi_cope" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaContaHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="dcl_codd" type="s:string" />
+    <wsdl:part name="con_codi" type="s:string" />
+    <wsdl:part name="con_nomb" type="s:string" />
+    <wsdl:part name="con_carg" type="s:string" />
+    <wsdl:part name="con_dire" type="s:string" />
+    <wsdl:part name="con_dibo" type="s:string" />
+    <wsdl:part name="con_tele" type="s:string" />
+    <wsdl:part name="con_nufa" type="s:string" />
+    <wsdl:part name="con_mail" type="s:string" />
+    <wsdl:part name="con_fcum" type="s:string" />
+    <wsdl:part name="con_afic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaContaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncEmpleadoPvdorHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="pvd_coda" type="s:string" />
+    <wsdl:part name="pvd_dive" type="s:string" />
+    <wsdl:part name="pvd_nomb" type="s:string" />
+    <wsdl:part name="pvd_apel" type="s:string" />
+    <wsdl:part name="pvd_noco" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="cup_nume" type="s:string" />
+    <wsdl:part name="ban_codi" type="s:string" />
+    <wsdl:part name="sub_codi" type="s:string" />
+    <wsdl:part name="cup_tipo" type="s:string" />
+    <wsdl:part name="dep_dire" type="s:string" />
+    <wsdl:part name="dep_ntel" type="s:string" />
+    <wsdl:part name="dep_mail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncEmpleadoPvdorHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="ter_codn" type="s:string" />
+    <wsdl:part name="tip_codn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitOpcHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="ter_codn" type="s:string" />
+    <wsdl:part name="tip_codn" type="s:string" />
+    <wsdl:part name="tip_coda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitOpcHttpGetOut">
+    <wsdl:part name="Body" element="tns:TOTransactNit" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="arb_codc" type="s:string" />
+    <wsdl:part name="ite_moda" type="s:string" />
+    <wsdl:part name="dcl_cupo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="arb_codc" type="s:string" />
+    <wsdl:part name="ite_moda" type="s:string" />
+    <wsdl:part name="dcl_cupo" type="s:string" />
+    <wsdl:part name="arb_cods" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncGnTerceHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="ter_dive" type="s:string" />
+    <wsdl:part name="ter_nomb" type="s:string" />
+    <wsdl:part name="ter_apel" type="s:string" />
+    <wsdl:part name="ter_noco" type="s:string" />
+    <wsdl:part name="mod_codi" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="ter_dire" type="s:string" />
+    <wsdl:part name="ter_ntel" type="s:string" />
+    <wsdl:part name="ter_mail" type="s:string" />
+    <wsdl:part name="ter_nfax" type="s:string" />
+    <wsdl:part name="ter_audp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncGnTerceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="cli_dive" type="s:string" />
+    <wsdl:part name="cli_nomb" type="s:string" />
+    <wsdl:part name="cli_apel" type="s:string" />
+    <wsdl:part name="cli_noco" type="s:string" />
+    <wsdl:part name="mod_codi" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="tcl_codi" type="s:string" />
+    <wsdl:part name="cal_codi" type="s:string" />
+    <wsdl:part name="coc_codi" type="s:string" />
+    <wsdl:part name="cim_codi" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="dcl_dire" type="s:string" />
+    <wsdl:part name="dcl_ntel" type="s:string" />
+    <wsdl:part name="dcl_mail" type="s:string" />
+    <wsdl:part name="dcl_nfax" type="s:string" />
+    <wsdl:part name="arb_clte" type="s:string" />
+    <wsdl:part name="cli_inna" type="s:string" />
+    <wsdl:part name="ven_codi" type="s:string" />
+    <wsdl:part name="arb_ccec" type="s:string" />
+    <wsdl:part name="lis_codi" type="s:string" />
+    <wsdl:part name="dcl_obse" type="s:string" />
+    <wsdl:part name="dcl_apar" type="s:string" />
+    <wsdl:part name="dcl_cloc" type="s:string" />
+    <wsdl:part name="cli_anex" type="s:string" />
+    <wsdl:part name="cli_hpra" type="s:string" />
+    <wsdl:part name="cli_fecm" type="s:string" />
+    <wsdl:part name="cli_feca" type="s:string" />
+    <wsdl:part name="cli_audp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaClienHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="pvd_coda" type="s:string" />
+    <wsdl:part name="pvd_dive" type="s:string" />
+    <wsdl:part name="pvd_nomb" type="s:string" />
+    <wsdl:part name="pvd_apel" type="s:string" />
+    <wsdl:part name="pvd_noco" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="tpr_codi" type="s:string" />
+    <wsdl:part name="pvd_clad" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="cal_codi" type="s:string" />
+    <wsdl:part name="coc_codi" type="s:string" />
+    <wsdl:part name="cim_codi" type="s:string" />
+    <wsdl:part name="act_codi" type="s:string" />
+    <wsdl:part name="mon_codi" type="s:string" />
+    <wsdl:part name="cup_nume" type="s:string" />
+    <wsdl:part name="cup_idba" type="s:string" />
+    <wsdl:part name="ban_codi" type="s:string" />
+    <wsdl:part name="sub_codi" type="s:string" />
+    <wsdl:part name="cup_tipo" type="s:string" />
+    <wsdl:part name="pvr_riva" type="s:string" />
+    <wsdl:part name="pvr_auto" type="s:string" />
+    <wsdl:part name="pvr_reau" type="s:string" />
+    <wsdl:part name="cup_tdba" type="s:string" />
+    <wsdl:part name="cup_tcta" type="s:string" />
+    <wsdl:part name="cup_ib04" type="s:string" />
+    <wsdl:part name="cup_ib05" type="s:string" />
+    <wsdl:part name="cup_ib06" type="s:string" />
+    <wsdl:part name="cup_ib07" type="s:string" />
+    <wsdl:part name="cup_ib08" type="s:string" />
+    <wsdl:part name="cup_ib09" type="s:string" />
+    <wsdl:part name="cup_ib10" type="s:string" />
+    <wsdl:part name="dep_dire" type="s:string" />
+    <wsdl:part name="dep_ntel" type="s:string" />
+    <wsdl:part name="dep_mail" type="s:string" />
+    <wsdl:part name="dep_codd" type="s:string" />
+    <wsdl:part name="cup_numi" type="s:string" />
+    <wsdl:part name="cup_nomi" type="s:string" />
+    <wsdl:part name="ban_coin" type="s:string" />
+    <wsdl:part name="ban_dire" type="s:string" />
+    <wsdl:part name="cup_coab" type="s:string" />
+    <wsdl:part name="cup_coib" type="s:string" />
+    <wsdl:part name="cup_coas" type="s:string" />
+    <wsdl:part name="cup_cobi" type="s:string" />
+    <wsdl:part name="cup_clas" type="s:string" />
+    <wsdl:part name="dep_apar" type="s:string" />
+    <wsdl:part name="dep_nfax" type="s:string" />
+    <wsdl:part name="dep_cloc" type="s:string" />
+    <wsdl:part name="dep_nomb" type="s:string" />
+    <wsdl:part name="cup_esta" type="s:string" />
+    <wsdl:part name="pvd_audp" type="s:string" />
+    <wsdl:part name="pvd_moin" type="s:string" />
+    <wsdl:part name="pvd_mrpu" type="s:string" />
+    <wsdl:part name="pvd_serp" type="s:string" />
+    <wsdl:part name="ite_codi_cope" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncPoPvdorHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaContaHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="dcl_codd" type="s:string" />
+    <wsdl:part name="con_codi" type="s:string" />
+    <wsdl:part name="con_nomb" type="s:string" />
+    <wsdl:part name="con_carg" type="s:string" />
+    <wsdl:part name="con_dire" type="s:string" />
+    <wsdl:part name="con_dibo" type="s:string" />
+    <wsdl:part name="con_tele" type="s:string" />
+    <wsdl:part name="con_nufa" type="s:string" />
+    <wsdl:part name="con_mail" type="s:string" />
+    <wsdl:part name="con_fcum" type="s:string" />
+    <wsdl:part name="con_afic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncFaContaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncEmpleadoPvdorHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="tip_codi" type="s:string" />
+    <wsdl:part name="pvd_coda" type="s:string" />
+    <wsdl:part name="pvd_dive" type="s:string" />
+    <wsdl:part name="pvd_nomb" type="s:string" />
+    <wsdl:part name="pvd_apel" type="s:string" />
+    <wsdl:part name="pvd_noco" type="s:string" />
+    <wsdl:part name="pai_codi" type="s:string" />
+    <wsdl:part name="dep_codi" type="s:string" />
+    <wsdl:part name="mun_codi" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="cup_nume" type="s:string" />
+    <wsdl:part name="ban_codi" type="s:string" />
+    <wsdl:part name="sub_codi" type="s:string" />
+    <wsdl:part name="cup_tipo" type="s:string" />
+    <wsdl:part name="dep_dire" type="s:string" />
+    <wsdl:part name="dep_ntel" type="s:string" />
+    <wsdl:part name="dep_mail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SyncEmpleadoPvdorHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="ter_codn" type="s:string" />
+    <wsdl:part name="tip_codn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitOpcHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="ter_coda" type="s:string" />
+    <wsdl:part name="ter_codn" type="s:string" />
+    <wsdl:part name="tip_codn" type="s:string" />
+    <wsdl:part name="tip_coda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNitOpcHttpPostOut">
+    <wsdl:part name="Body" element="tns:TOTransactNit" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="arb_codc" type="s:string" />
+    <wsdl:part name="ite_moda" type="s:string" />
+    <wsdl:part name="dcl_cupo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="arb_codc" type="s:string" />
+    <wsdl:part name="ite_moda" type="s:string" />
+    <wsdl:part name="dcl_cupo" type="s:string" />
+    <wsdl:part name="arb_cods" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ActModalidadCupoSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SIEWSSECSoap">
+    <wsdl:operation name="SyncGnTerce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar terceros.</wsdl:documentation>
+      <wsdl:input message="tns:SyncGnTerceSoapIn" />
+      <wsdl:output message="tns:SyncGnTerceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaClienSoapIn" />
+      <wsdl:output message="tns:SyncFaClienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClienComplex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar clientes objeto complejo SEVEN - ERP .</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaClienComplexSoapIn" />
+      <wsdl:output message="tns:SyncFaClienComplexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores.</wsdl:documentation>
+      <wsdl:input message="tns:SyncPoPvdorSoapIn" />
+      <wsdl:output message="tns:SyncPoPvdorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdorComplex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores, con estado parametrizado.</wsdl:documentation>
+      <wsdl:input message="tns:SyncPoPvdorComplexSoapIn" />
+      <wsdl:output message="tns:SyncPoPvdorComplexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar contactos de detalles clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaContaSoapIn" />
+      <wsdl:output message="tns:SyncFaContaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores que provienen de Kactus.</wsdl:documentation>
+      <wsdl:input message="tns:SyncEmpleadoPvdorSoapIn" />
+      <wsdl:output message="tns:SyncEmpleadoPvdorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cambiar el Nit de un Tercero, Proveedor o cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeNitSoapIn" />
+      <wsdl:output message="tns:ChangeNitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cambiar el Nit de un Tercero, Proveedor o cliente. Este método retorna una clase y no un string como respuesta.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeNitOpcSoapIn" />
+      <wsdl:output message="tns:ChangeNitOpcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar la Modalidad y Cupo de un Detalle de Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ActModalidadCupoSoapIn" />
+      <wsdl:output message="tns:ActModalidadCupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar la Modalidad y Cupo de un Detalle de Cliente por Sucursal.</wsdl:documentation>
+      <wsdl:input message="tns:ActModalidadCupoSSoapIn" />
+      <wsdl:output message="tns:ActModalidadCupoSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActEstadoCliente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar el estado de un cliente en SEVEN - ERP.</wsdl:documentation>
+      <wsdl:input message="tns:ActEstadoClienteSoapIn" />
+      <wsdl:output message="tns:ActEstadoClienteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SIEWSSECHttpGet">
+    <wsdl:operation name="SyncGnTerce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar terceros.</wsdl:documentation>
+      <wsdl:input message="tns:SyncGnTerceHttpGetIn" />
+      <wsdl:output message="tns:SyncGnTerceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaClienHttpGetIn" />
+      <wsdl:output message="tns:SyncFaClienHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores.</wsdl:documentation>
+      <wsdl:input message="tns:SyncPoPvdorHttpGetIn" />
+      <wsdl:output message="tns:SyncPoPvdorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar contactos de detalles clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaContaHttpGetIn" />
+      <wsdl:output message="tns:SyncFaContaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores que provienen de Kactus.</wsdl:documentation>
+      <wsdl:input message="tns:SyncEmpleadoPvdorHttpGetIn" />
+      <wsdl:output message="tns:SyncEmpleadoPvdorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cambiar el Nit de un Tercero, Proveedor o cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeNitHttpGetIn" />
+      <wsdl:output message="tns:ChangeNitHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cambiar el Nit de un Tercero, Proveedor o cliente. Este método retorna una clase y no un string como respuesta.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeNitOpcHttpGetIn" />
+      <wsdl:output message="tns:ChangeNitOpcHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar la Modalidad y Cupo de un Detalle de Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ActModalidadCupoHttpGetIn" />
+      <wsdl:output message="tns:ActModalidadCupoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar la Modalidad y Cupo de un Detalle de Cliente por Sucursal.</wsdl:documentation>
+      <wsdl:input message="tns:ActModalidadCupoSHttpGetIn" />
+      <wsdl:output message="tns:ActModalidadCupoSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SIEWSSECHttpPost">
+    <wsdl:operation name="SyncGnTerce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar terceros.</wsdl:documentation>
+      <wsdl:input message="tns:SyncGnTerceHttpPostIn" />
+      <wsdl:output message="tns:SyncGnTerceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaClienHttpPostIn" />
+      <wsdl:output message="tns:SyncFaClienHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores.</wsdl:documentation>
+      <wsdl:input message="tns:SyncPoPvdorHttpPostIn" />
+      <wsdl:output message="tns:SyncPoPvdorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar contactos de detalles clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SyncFaContaHttpPostIn" />
+      <wsdl:output message="tns:SyncFaContaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar o actualizar proveedores que provienen de Kactus.</wsdl:documentation>
+      <wsdl:input message="tns:SyncEmpleadoPvdorHttpPostIn" />
+      <wsdl:output message="tns:SyncEmpleadoPvdorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cambiar el Nit de un Tercero, Proveedor o cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeNitHttpPostIn" />
+      <wsdl:output message="tns:ChangeNitHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite cambiar el Nit de un Tercero, Proveedor o cliente. Este método retorna una clase y no un string como respuesta.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeNitOpcHttpPostIn" />
+      <wsdl:output message="tns:ChangeNitOpcHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar la Modalidad y Cupo de un Detalle de Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ActModalidadCupoHttpPostIn" />
+      <wsdl:output message="tns:ActModalidadCupoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite actualizar la Modalidad y Cupo de un Detalle de Cliente por Sucursal.</wsdl:documentation>
+      <wsdl:input message="tns:ActModalidadCupoSHttpPostIn" />
+      <wsdl:output message="tns:ActModalidadCupoSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SIEWSSECSoap" type="tns:SIEWSSECSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SyncGnTerce">
+      <soap:operation soapAction="http://seven/SyncGnTerce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <soap:operation soapAction="http://seven/SyncFaClien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClienComplex">
+      <soap:operation soapAction="http://seven/SyncFaClienComplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <soap:operation soapAction="http://seven/SyncPoPvdor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdorComplex">
+      <soap:operation soapAction="http://seven/SyncPoPvdorComplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <soap:operation soapAction="http://seven/SyncFaConta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <soap:operation soapAction="http://seven/SyncEmpleadoPvdor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <soap:operation soapAction="http://seven/ChangeNit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <soap:operation soapAction="http://seven/ChangeNitOpc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <soap:operation soapAction="http://seven/ActModalidadCupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <soap:operation soapAction="http://seven/ActModalidadCupoS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActEstadoCliente">
+      <soap:operation soapAction="http://seven/ActEstadoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SIEWSSECSoap12" type="tns:SIEWSSECSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SyncGnTerce">
+      <soap12:operation soapAction="http://seven/SyncGnTerce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <soap12:operation soapAction="http://seven/SyncFaClien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClienComplex">
+      <soap12:operation soapAction="http://seven/SyncFaClienComplex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <soap12:operation soapAction="http://seven/SyncPoPvdor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdorComplex">
+      <soap12:operation soapAction="http://seven/SyncPoPvdorComplex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <soap12:operation soapAction="http://seven/SyncFaConta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <soap12:operation soapAction="http://seven/SyncEmpleadoPvdor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <soap12:operation soapAction="http://seven/ChangeNit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <soap12:operation soapAction="http://seven/ChangeNitOpc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <soap12:operation soapAction="http://seven/ActModalidadCupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <soap12:operation soapAction="http://seven/ActModalidadCupoS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActEstadoCliente">
+      <soap12:operation soapAction="http://seven/ActEstadoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SIEWSSECHttpGet" type="tns:SIEWSSECHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SyncGnTerce">
+      <http:operation location="/SyncGnTerce" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <http:operation location="/SyncFaClien" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <http:operation location="/SyncPoPvdor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <http:operation location="/SyncFaConta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <http:operation location="/SyncEmpleadoPvdor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <http:operation location="/ChangeNit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <http:operation location="/ChangeNitOpc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <http:operation location="/ActModalidadCupo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <http:operation location="/ActModalidadCupoS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SIEWSSECHttpPost" type="tns:SIEWSSECHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SyncGnTerce">
+      <http:operation location="/SyncGnTerce" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaClien">
+      <http:operation location="/SyncFaClien" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPoPvdor">
+      <http:operation location="/SyncPoPvdor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFaConta">
+      <http:operation location="/SyncFaConta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncEmpleadoPvdor">
+      <http:operation location="/SyncEmpleadoPvdor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNit">
+      <http:operation location="/ChangeNit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNitOpc">
+      <http:operation location="/ChangeNitOpc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupo">
+      <http:operation location="/ActModalidadCupo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActModalidadCupoS">
+      <http:operation location="/ActModalidadCupoS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SIEWSSEC">
+    <wsdl:port name="SIEWSSECSoap" binding="tns:SIEWSSECSoap">
+      <soap:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SIEWSSECSoap12" binding="tns:SIEWSSECSoap12">
+      <soap12:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SIEWSSECHttpGet" binding="tns:SIEWSSECHttpGet">
+      <http:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SIEWSSECHttpPost" binding="tns:SIEWSSECHttpPost">
+      <http:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

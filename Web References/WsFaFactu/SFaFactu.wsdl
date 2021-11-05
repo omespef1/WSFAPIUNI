@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://seven/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://seven/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://seven/">
+      <s:element name="InsertarFaFactu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="top_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_nume" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_fech" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fac_desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cli_coda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dcl_codd" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mon_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_feta" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="fac_tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_feci" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_fecf" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="fac_cref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarFaFactuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarFaFactuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarFaDfact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dfa_cont" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bod_codi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pro_codi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="uni_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dfa_cant" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="dfa_valo" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="dfa_tide" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dfa_pvde" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="dfa_desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dfa_dest" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_csuc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_care" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_cpro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_ccec" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarFaDfactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarFaDfactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AplicarFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AplicarFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AplicarFacturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnularFacturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fac_esth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnularHResult" type="tns:TSalida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSalida">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Retorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TxtError" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AnularFacturaConCruce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularFacturaConCruceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnularFacturaConCruceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarFacturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pFactura" type="tns:TSFaFactu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSFaFactu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="vDetalle" type="tns:ArrayOfTSFaDfact" />
+          <s:element minOccurs="0" maxOccurs="1" name="vCruce" type="tns:ArrayOfTSFaCruau" />
+          <s:element minOccurs="0" maxOccurs="1" name="vCAdic" type="tns:ArrayOfTSFaDcoad" />
+          <s:element minOccurs="0" maxOccurs="1" name="vDocBase" type="tns:ArrayOfTSFaCtrlo" />
+          <s:element minOccurs="0" maxOccurs="1" name="vAnticipo" type="tns:ArrayOfTSFaDanti" />
+          <s:element minOccurs="1" maxOccurs="1" name="Emp_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Top_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_nume" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_fech" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_csuc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cli_coda" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dcl_codd" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mon_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_tdis" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_tipo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_feta" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_feci" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_fecf" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_cref" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_fepo" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_fepe" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_fext" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mco_cont" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_tido" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_pepe" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_pext" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_peri" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_esth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_esta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaDfact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaDfact" nillable="true" type="tns:TSFaDfact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaDfact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="vDistribA" type="tns:ArrayOfTSFaDdisp" />
+          <s:element minOccurs="0" maxOccurs="1" name="vDistribM" type="tns:ArrayOfTSFaDmfac" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bod_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pro_codi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Uni_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dfa_cant" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dfa_valo" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dfa_tide" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dfa_pvde" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dfa_desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dfa_dest" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ctr_cont" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cli_coda" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dcl_codd" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaDdisp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaDdisp" nillable="true" type="tns:TSFaDdisp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaDdisp">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Tar_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_codi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ddi_tipo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ddi_valo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ddi_porc" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaDmfac">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaDmfac" nillable="true" type="tns:TSFaDmfac" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaDmfac">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_codc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_coda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_codp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_coss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dmf_tipo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dmf_valo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dmf_porc" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaCruau">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaCruau" nillable="true" type="tns:TSFaCruau" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaCruau">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Top_codc" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_numc" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_fecc" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Arb_succ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cru_valo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cxc_cont" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaDcoad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaDcoad" nillable="true" type="tns:TSFaDcoad" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaDcoad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Coa_codi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Coa_valo" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaCtrlo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaCtrlo" nillable="true" type="tns:TSFaCtrlo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaCtrlo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Top_base" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bas_nume" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bas_fech" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bas_csuc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bas_cont" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaDanti">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaDanti" nillable="true" type="tns:TSFaDanti" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaDanti">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Top_cant" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_nant" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fac_fant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Suc_cant" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fac_vran" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertarFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarFacturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarReporteFaFactu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="emp_codi" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="top_codi" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_nume" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_fech" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="arb_cods" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fac_cont" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="for_codi" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerarReporteFaFactuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerarReporteFaFactuResult" type="tns:TSalidaR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSalidaR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Retorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TxtError" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ruta_pdf" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="TSalida" nillable="true" type="tns:TSalida" />
+      <s:element name="TSalidaR" nillable="true" type="tns:TSalidaR" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertarFaFactuSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarFaFactu" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaFactuSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarFaFactuResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaDfactSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarFaDfact" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaDfactSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarFaDfactResponse" />
+  </wsdl:message>
+  <wsdl:message name="AplicarFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:AplicarFactura" />
+  </wsdl:message>
+  <wsdl:message name="AplicarFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:AplicarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:AnularFactura" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:AnularFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnularHSoapIn">
+    <wsdl:part name="parameters" element="tns:AnularH" />
+  </wsdl:message>
+  <wsdl:message name="AnularHSoapOut">
+    <wsdl:part name="parameters" element="tns:AnularHResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaConCruceSoapIn">
+    <wsdl:part name="parameters" element="tns:AnularFacturaConCruce" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaConCruceSoapOut">
+    <wsdl:part name="parameters" element="tns:AnularFacturaConCruceResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarFactura" />
+  </wsdl:message>
+  <wsdl:message name="EliminarFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarFactura" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteFaFactuSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerarReporteFaFactu" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteFaFactuSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerarReporteFaFactuResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaFactuHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="top_codi" type="s:string" />
+    <wsdl:part name="fac_nume" type="s:string" />
+    <wsdl:part name="fac_fech" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="fac_desc" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="dcl_codd" type="s:string" />
+    <wsdl:part name="mon_codi" type="s:string" />
+    <wsdl:part name="fac_feta" type="s:string" />
+    <wsdl:part name="fac_tipo" type="s:string" />
+    <wsdl:part name="fac_feci" type="s:string" />
+    <wsdl:part name="fac_fecf" type="s:string" />
+    <wsdl:part name="fac_cref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaFactuHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaDfactHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+    <wsdl:part name="dfa_cont" type="s:string" />
+    <wsdl:part name="bod_codi" type="s:string" />
+    <wsdl:part name="pro_codi" type="s:string" />
+    <wsdl:part name="uni_codi" type="s:string" />
+    <wsdl:part name="dfa_cant" type="s:string" />
+    <wsdl:part name="dfa_valo" type="s:string" />
+    <wsdl:part name="dfa_tide" type="s:string" />
+    <wsdl:part name="dfa_pvde" type="s:string" />
+    <wsdl:part name="dfa_desc" type="s:string" />
+    <wsdl:part name="dfa_dest" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="arb_care" type="s:string" />
+    <wsdl:part name="arb_cpro" type="s:string" />
+    <wsdl:part name="arb_ccec" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaDfactHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AplicarFacturaHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AplicarFacturaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularHHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+    <wsdl:part name="fac_esth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularHHttpGetOut">
+    <wsdl:part name="Body" element="tns:TSalida" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaConCruceHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaConCruceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarFacturaHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarFacturaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteFaFactuHttpGetIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="top_codi" type="s:string" />
+    <wsdl:part name="fac_nume" type="s:string" />
+    <wsdl:part name="fac_fech" type="s:string" />
+    <wsdl:part name="arb_cods" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+    <wsdl:part name="for_codi" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteFaFactuHttpGetOut">
+    <wsdl:part name="Body" element="tns:TSalidaR" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaFactuHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="top_codi" type="s:string" />
+    <wsdl:part name="fac_nume" type="s:string" />
+    <wsdl:part name="fac_fech" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="fac_desc" type="s:string" />
+    <wsdl:part name="cli_coda" type="s:string" />
+    <wsdl:part name="dcl_codd" type="s:string" />
+    <wsdl:part name="mon_codi" type="s:string" />
+    <wsdl:part name="fac_feta" type="s:string" />
+    <wsdl:part name="fac_tipo" type="s:string" />
+    <wsdl:part name="fac_feci" type="s:string" />
+    <wsdl:part name="fac_fecf" type="s:string" />
+    <wsdl:part name="fac_cref" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaFactuHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaDfactHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+    <wsdl:part name="dfa_cont" type="s:string" />
+    <wsdl:part name="bod_codi" type="s:string" />
+    <wsdl:part name="pro_codi" type="s:string" />
+    <wsdl:part name="uni_codi" type="s:string" />
+    <wsdl:part name="dfa_cant" type="s:string" />
+    <wsdl:part name="dfa_valo" type="s:string" />
+    <wsdl:part name="dfa_tide" type="s:string" />
+    <wsdl:part name="dfa_pvde" type="s:string" />
+    <wsdl:part name="dfa_desc" type="s:string" />
+    <wsdl:part name="dfa_dest" type="s:string" />
+    <wsdl:part name="arb_csuc" type="s:string" />
+    <wsdl:part name="arb_care" type="s:string" />
+    <wsdl:part name="arb_cpro" type="s:string" />
+    <wsdl:part name="arb_ccec" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFaDfactHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AplicarFacturaHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AplicarFacturaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularHHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+    <wsdl:part name="fac_esth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularHHttpPostOut">
+    <wsdl:part name="Body" element="tns:TSalida" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaConCruceHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularFacturaConCruceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarFacturaHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarFacturaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteFaFactuHttpPostIn">
+    <wsdl:part name="emp_codi" type="s:string" />
+    <wsdl:part name="top_codi" type="s:string" />
+    <wsdl:part name="fac_nume" type="s:string" />
+    <wsdl:part name="fac_fech" type="s:string" />
+    <wsdl:part name="arb_cods" type="s:string" />
+    <wsdl:part name="fac_cont" type="s:string" />
+    <wsdl:part name="for_codi" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerarReporteFaFactuHttpPostOut">
+    <wsdl:part name="Body" element="tns:TSalidaR" />
+  </wsdl:message>
+  <wsdl:portType name="SFAFACTUSoap">
+    <wsdl:operation name="InsertarFaFactu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar el encabezado de una Factura Cliente. Tabla: FA_FACTU.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFaFactuSoapIn" />
+      <wsdl:output message="tns:InsertarFaFactuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar el detalle de una Factura Cliente. Tabla: FA_DFACT.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFaDfactSoapIn" />
+      <wsdl:output message="tns:InsertarFaDfactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Aplicar una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AplicarFacturaSoapIn" />
+      <wsdl:output message="tns:AplicarFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AnularFacturaSoapIn" />
+      <wsdl:output message="tns:AnularFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Integración Hosvital.</wsdl:documentation>
+      <wsdl:input message="tns:AnularHSoapIn" />
+      <wsdl:output message="tns:AnularHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AnularFacturaConCruceSoapIn" />
+      <wsdl:output message="tns:AnularFacturaConCruceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Eliminar una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:EliminarFacturaSoapIn" />
+      <wsdl:output message="tns:EliminarFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Crear un Documento de Facturación Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFacturaSoapIn" />
+      <wsdl:output message="tns:InsertarFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite generar documentos SFaFactu, dependiendo de SFaForma. </wsdl:documentation>
+      <wsdl:input message="tns:GenerarReporteFaFactuSoapIn" />
+      <wsdl:output message="tns:GenerarReporteFaFactuSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SFAFACTUHttpGet">
+    <wsdl:operation name="InsertarFaFactu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar el encabezado de una Factura Cliente. Tabla: FA_FACTU.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFaFactuHttpGetIn" />
+      <wsdl:output message="tns:InsertarFaFactuHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar el detalle de una Factura Cliente. Tabla: FA_DFACT.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFaDfactHttpGetIn" />
+      <wsdl:output message="tns:InsertarFaDfactHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Aplicar una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AplicarFacturaHttpGetIn" />
+      <wsdl:output message="tns:AplicarFacturaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AnularFacturaHttpGetIn" />
+      <wsdl:output message="tns:AnularFacturaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Integración Hosvital.</wsdl:documentation>
+      <wsdl:input message="tns:AnularHHttpGetIn" />
+      <wsdl:output message="tns:AnularHHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AnularFacturaConCruceHttpGetIn" />
+      <wsdl:output message="tns:AnularFacturaConCruceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Eliminar una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:EliminarFacturaHttpGetIn" />
+      <wsdl:output message="tns:EliminarFacturaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite generar documentos SFaFactu, dependiendo de SFaForma. </wsdl:documentation>
+      <wsdl:input message="tns:GenerarReporteFaFactuHttpGetIn" />
+      <wsdl:output message="tns:GenerarReporteFaFactuHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SFAFACTUHttpPost">
+    <wsdl:operation name="InsertarFaFactu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar el encabezado de una Factura Cliente. Tabla: FA_FACTU.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFaFactuHttpPostIn" />
+      <wsdl:output message="tns:InsertarFaFactuHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite insertar el detalle de una Factura Cliente. Tabla: FA_DFACT.</wsdl:documentation>
+      <wsdl:input message="tns:InsertarFaDfactHttpPostIn" />
+      <wsdl:output message="tns:InsertarFaDfactHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Aplicar una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AplicarFacturaHttpPostIn" />
+      <wsdl:output message="tns:AplicarFacturaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AnularFacturaHttpPostIn" />
+      <wsdl:output message="tns:AnularFacturaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Integración Hosvital.</wsdl:documentation>
+      <wsdl:input message="tns:AnularHHttpPostIn" />
+      <wsdl:output message="tns:AnularHHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Anular una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:AnularFacturaConCruceHttpPostIn" />
+      <wsdl:output message="tns:AnularFacturaConCruceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite Eliminar una Factura Cliente.</wsdl:documentation>
+      <wsdl:input message="tns:EliminarFacturaHttpPostIn" />
+      <wsdl:output message="tns:EliminarFacturaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Permite generar documentos SFaFactu, dependiendo de SFaForma. </wsdl:documentation>
+      <wsdl:input message="tns:GenerarReporteFaFactuHttpPostIn" />
+      <wsdl:output message="tns:GenerarReporteFaFactuHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SFAFACTUSoap" type="tns:SFAFACTUSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarFaFactu">
+      <soap:operation soapAction="http://seven/InsertarFaFactu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <soap:operation soapAction="http://seven/InsertarFaDfact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <soap:operation soapAction="http://seven/AplicarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <soap:operation soapAction="http://seven/AnularFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <soap:operation soapAction="http://seven/AnularH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <soap:operation soapAction="http://seven/AnularFacturaConCruce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <soap:operation soapAction="http://seven/EliminarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFactura">
+      <soap:operation soapAction="http://seven/InsertarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <soap:operation soapAction="http://seven/GenerarReporteFaFactu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SFAFACTUSoap12" type="tns:SFAFACTUSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarFaFactu">
+      <soap12:operation soapAction="http://seven/InsertarFaFactu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <soap12:operation soapAction="http://seven/InsertarFaDfact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <soap12:operation soapAction="http://seven/AplicarFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <soap12:operation soapAction="http://seven/AnularFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <soap12:operation soapAction="http://seven/AnularH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <soap12:operation soapAction="http://seven/AnularFacturaConCruce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <soap12:operation soapAction="http://seven/EliminarFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFactura">
+      <soap12:operation soapAction="http://seven/InsertarFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <soap12:operation soapAction="http://seven/GenerarReporteFaFactu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SFAFACTUHttpGet" type="tns:SFAFACTUHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="InsertarFaFactu">
+      <http:operation location="/InsertarFaFactu" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <http:operation location="/InsertarFaDfact" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <http:operation location="/AplicarFactura" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <http:operation location="/AnularFactura" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <http:operation location="/AnularH" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <http:operation location="/AnularFacturaConCruce" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <http:operation location="/EliminarFactura" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <http:operation location="/GenerarReporteFaFactu" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SFAFACTUHttpPost" type="tns:SFAFACTUHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="InsertarFaFactu">
+      <http:operation location="/InsertarFaFactu" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFaDfact">
+      <http:operation location="/InsertarFaDfact" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AplicarFactura">
+      <http:operation location="/AplicarFactura" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFactura">
+      <http:operation location="/AnularFactura" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularH">
+      <http:operation location="/AnularH" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularFacturaConCruce">
+      <http:operation location="/AnularFacturaConCruce" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarFactura">
+      <http:operation location="/EliminarFactura" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarReporteFaFactu">
+      <http:operation location="/GenerarReporteFaFactu" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SFAFACTU">
+    <wsdl:port name="SFAFACTUSoap" binding="tns:SFAFACTUSoap">
+      <soap:address location="http://localhost:1336/SFaFactu.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SFAFACTUSoap12" binding="tns:SFAFACTUSoap12">
+      <soap12:address location="http://localhost:1336/SFaFactu.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SFAFACTUHttpGet" binding="tns:SFAFACTUHttpGet">
+      <http:address location="http://localhost:1336/SFaFactu.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SFAFACTUHttpPost" binding="tns:SFAFACTUHttpPost">
+      <http:address location="http://localhost:1336/SFaFactu.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
