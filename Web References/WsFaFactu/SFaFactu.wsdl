@@ -154,6 +154,8 @@
           <s:element minOccurs="0" maxOccurs="1" name="vCAdic" type="tns:ArrayOfTSFaDcoad" />
           <s:element minOccurs="0" maxOccurs="1" name="vDocBase" type="tns:ArrayOfTSFaCtrlo" />
           <s:element minOccurs="0" maxOccurs="1" name="vAnticipo" type="tns:ArrayOfTSFaDanti" />
+          <s:element minOccurs="0" maxOccurs="1" name="vTerceros" type="tns:ArrayOfTOFaDtere" />
+          <s:element minOccurs="0" maxOccurs="1" name="vFopa" type="tns:ArrayOfTSFaDfopa" />
           <s:element minOccurs="1" maxOccurs="1" name="Emp_codi" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Top_codi" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Fac_nume" type="s:int" />
@@ -179,8 +181,9 @@
           <s:element minOccurs="0" maxOccurs="1" name="Fac_peri" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Fac_esth" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Fac_esta" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fac_attchment" type="tns:ArrayOfString" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfTSFaDfact">
@@ -288,6 +291,45 @@
           <s:element minOccurs="0" maxOccurs="1" name="Fac_fant" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Suc_cant" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="Fac_vran" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTOFaDtere">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TOFaDtere" nillable="true" type="tns:TOFaDtere" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TOFaDtere">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="dte_coda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dte_noma" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dte_cate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dte_obse" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dte_fnac" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="dte_gene" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTSFaDfopa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TSFaDfopa" nillable="true" type="tns:TSFaDfopa" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TSFaDfopa">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Fop_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tac_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dfo_nume" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dfo_valo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dfo_fech" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dfo_comp" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Caj_codi" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dfo_desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ban_codi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dfo_chec" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="InsertarFacturaResponse">
@@ -1010,16 +1052,16 @@
   </wsdl:binding>
   <wsdl:service name="SFAFACTU">
     <wsdl:port name="SFAFACTUSoap" binding="tns:SFAFACTUSoap">
-      <soap:address location="http://localhost:1336/SFaFactu.asmx" />
+      <soap:address location="http://consulss/webservices40/SFaFactu.asmx" />
     </wsdl:port>
     <wsdl:port name="SFAFACTUSoap12" binding="tns:SFAFACTUSoap12">
-      <soap12:address location="http://localhost:1336/SFaFactu.asmx" />
+      <soap12:address location="http://consulss/webservices40/SFaFactu.asmx" />
     </wsdl:port>
     <wsdl:port name="SFAFACTUHttpGet" binding="tns:SFAFACTUHttpGet">
-      <http:address location="http://localhost:1336/SFaFactu.asmx" />
+      <http:address location="http://consulss/webservices40/SFaFactu.asmx" />
     </wsdl:port>
     <wsdl:port name="SFAFACTUHttpPost" binding="tns:SFAFACTUHttpPost">
-      <http:address location="http://localhost:1336/SFaFactu.asmx" />
+      <http:address location="http://consulss/webservices40/SFaFactu.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

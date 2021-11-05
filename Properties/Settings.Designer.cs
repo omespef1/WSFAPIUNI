@@ -12,7 +12,7 @@ namespace WSFAPIUNI.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,20 +26,20 @@ namespace WSFAPIUNI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://cerezo/seven/webservices40/SIeWssec.asmx")]
-        public string WSFAPIUNI_WiewSsec_SIEWSSEC {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://consulss/webservices40/SFaFactu.asmx")]
+        public string WSFAPIUNI_WsFaFactu_SFAFACTU {
             get {
-                return ((string)(this["WSFAPIUNI_WiewSsec_SIEWSSEC"]));
+                return ((string)(this["WSFAPIUNI_WsFaFactu_SFAFACTU"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://cerezo/seven/webservices40/SFaFactu.asmx")]
-        public string WSFAPIUNI_WsFaFactu_SFAFACTU {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://consulss/webservices40/SIeWssec.asmx")]
+        public string WSFAPIUNI_WiewSsec_SIEWSSEC {
             get {
-                return ((string)(this["WSFAPIUNI_WsFaFactu_SFAFACTU"]));
+                return ((string)(this["WSFAPIUNI_WiewSsec_SIEWSSEC"]));
             }
         }
     }

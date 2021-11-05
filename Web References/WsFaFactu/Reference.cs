@@ -23,7 +23,7 @@ namespace WSFAPIUNI.WsFaFactu {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="SFAFACTUSoap", Namespace="http://seven/")]
@@ -522,7 +522,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -555,7 +555,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -600,7 +600,217 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://seven/")]
+    public partial class TSFaDfopa {
+        
+        private int fop_codiField;
+        
+        private int tac_codiField;
+        
+        private string dfo_numeField;
+        
+        private double dfo_valoField;
+        
+        private System.DateTime dfo_fechField;
+        
+        private string dfo_compField;
+        
+        private int caj_codiField;
+        
+        private string dfo_descField;
+        
+        private int ban_codiField;
+        
+        private int dfo_checField;
+        
+        /// <remarks/>
+        public int Fop_codi {
+            get {
+                return this.fop_codiField;
+            }
+            set {
+                this.fop_codiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Tac_codi {
+            get {
+                return this.tac_codiField;
+            }
+            set {
+                this.tac_codiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Dfo_nume {
+            get {
+                return this.dfo_numeField;
+            }
+            set {
+                this.dfo_numeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public double Dfo_valo {
+            get {
+                return this.dfo_valoField;
+            }
+            set {
+                this.dfo_valoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime Dfo_fech {
+            get {
+                return this.dfo_fechField;
+            }
+            set {
+                this.dfo_fechField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Dfo_comp {
+            get {
+                return this.dfo_compField;
+            }
+            set {
+                this.dfo_compField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Caj_codi {
+            get {
+                return this.caj_codiField;
+            }
+            set {
+                this.caj_codiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Dfo_desc {
+            get {
+                return this.dfo_descField;
+            }
+            set {
+                this.dfo_descField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Ban_codi {
+            get {
+                return this.ban_codiField;
+            }
+            set {
+                this.ban_codiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Dfo_chec {
+            get {
+                return this.dfo_checField;
+            }
+            set {
+                this.dfo_checField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://seven/")]
+    public partial class TOFaDtere {
+        
+        private string dte_codaField;
+        
+        private string dte_nomaField;
+        
+        private string dte_cateField;
+        
+        private string dte_obseField;
+        
+        private int dte_fnacField;
+        
+        private string dte_geneField;
+        
+        /// <remarks/>
+        public string dte_coda {
+            get {
+                return this.dte_codaField;
+            }
+            set {
+                this.dte_codaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string dte_noma {
+            get {
+                return this.dte_nomaField;
+            }
+            set {
+                this.dte_nomaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string dte_cate {
+            get {
+                return this.dte_cateField;
+            }
+            set {
+                this.dte_cateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string dte_obse {
+            get {
+                return this.dte_obseField;
+            }
+            set {
+                this.dte_obseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int dte_fnac {
+            get {
+                return this.dte_fnacField;
+            }
+            set {
+                this.dte_fnacField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string dte_gene {
+            get {
+                return this.dte_geneField;
+            }
+            set {
+                this.dte_geneField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -669,7 +879,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -738,7 +948,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -771,7 +981,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -852,7 +1062,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -945,7 +1155,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1014,7 +1224,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1191,7 +1401,7 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1207,6 +1417,10 @@ namespace WSFAPIUNI.WsFaFactu {
         private TSFaCtrlo[] vDocBaseField;
         
         private TSFaDanti[] vAnticipoField;
+        
+        private TOFaDtere[] vTercerosField;
+        
+        private TSFaDfopa[] vFopaField;
         
         private int emp_codiField;
         
@@ -1262,6 +1476,8 @@ namespace WSFAPIUNI.WsFaFactu {
         
         private string passwordField;
         
+        private string[] fac_attchmentField;
+        
         /// <remarks/>
         public TSFaDfact[] vDetalle {
             get {
@@ -1309,6 +1525,26 @@ namespace WSFAPIUNI.WsFaFactu {
             }
             set {
                 this.vAnticipoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TOFaDtere[] vTerceros {
+            get {
+                return this.vTercerosField;
+            }
+            set {
+                this.vTercerosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TSFaDfopa[] vFopa {
+            get {
+                return this.vFopaField;
+            }
+            set {
+                this.vFopaField = value;
             }
         }
         
@@ -1563,7 +1799,7 @@ namespace WSFAPIUNI.WsFaFactu {
         }
         
         /// <remarks/>
-        public string usuario {
+        public string Usuario {
             get {
                 return this.usuarioField;
             }
@@ -1573,7 +1809,7 @@ namespace WSFAPIUNI.WsFaFactu {
         }
         
         /// <remarks/>
-        public string password {
+        public string Password {
             get {
                 return this.passwordField;
             }
@@ -1581,14 +1817,24 @@ namespace WSFAPIUNI.WsFaFactu {
                 this.passwordField = value;
             }
         }
+        
+        /// <remarks/>
+        public string[] fac_attchment {
+            get {
+                return this.fac_attchmentField;
+            }
+            set {
+                this.fac_attchmentField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void InsertarFaFactuCompletedEventHandler(object sender, InsertarFaFactuCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class InsertarFaFactuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1610,11 +1856,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void InsertarFaDfactCompletedEventHandler(object sender, InsertarFaDfactCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class InsertarFaDfactCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1636,11 +1882,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void AplicarFacturaCompletedEventHandler(object sender, AplicarFacturaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AplicarFacturaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1662,11 +1908,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void AnularFacturaCompletedEventHandler(object sender, AnularFacturaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AnularFacturaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1688,11 +1934,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void AnularHCompletedEventHandler(object sender, AnularHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AnularHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1714,11 +1960,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void AnularFacturaConCruceCompletedEventHandler(object sender, AnularFacturaConCruceCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AnularFacturaConCruceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1740,11 +1986,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void EliminarFacturaCompletedEventHandler(object sender, EliminarFacturaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EliminarFacturaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1766,11 +2012,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void InsertarFacturaCompletedEventHandler(object sender, InsertarFacturaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class InsertarFacturaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1792,11 +2038,11 @@ namespace WSFAPIUNI.WsFaFactu {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GenerarReporteFaFactuCompletedEventHandler(object sender, GenerarReporteFaFactuCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GenerarReporteFaFactuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

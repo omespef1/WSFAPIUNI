@@ -43,7 +43,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Digitalware.Apps.Utilities.Fa">
+    <Reference Include="Digitalware.Apps.Utilities.Fa, Version=19.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>\\132.147.140.10\ftp\Seven\01.Ancestros\Dll.Net\4.5.1\Digitalware.Apps.Utilities.Fa.dll</HintPath>
     </Reference>
     <Reference Include="DigitalWare.Apps.Utilities.Gn">
@@ -120,14 +121,6 @@
     <Content Include="Service References\ServiceReference1\WSFAPIUNI.ServiceReference1.SincMatMovResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Web References\WiewSsec\TOTransactNit.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <None Include="Web References\WsFaFactu\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\WsFaFactu\SFaFactu.wsdl" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />
     <None Include="Service References\ServiceReference1\Reference.svcmap">
@@ -135,6 +128,26 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="SincMatMovPS.asmx" />
+    <Content Include="Web References\WiewSsec\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WiewSsec\SIeWssec.disco" />
+    <Content Include="Web References\WsFaFactu\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WiewSsec\SIeWssec.wsdl" />
+    <Content Include="Web References\WiewSsec\TOtransaction.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WiewSsec\TOTransactNit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WiewSsec\TSalida.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsFaFactu\SFaFactu.wsdl" />
     <Content Include="Web References\WsFaFactu\TSalida.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
@@ -160,20 +173,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WiewSsec\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\WiewSsec\SIeWssec.disco" />
+    <None Include="Web References\WsFaFactu\SFaFactu.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
-    </Content>
-    <None Include="Web References\WiewSsec\SIeWssec.wsdl" />
-    <Content Include="Web References\WiewSsec\TOtransaction.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <Content Include="Web References\WiewSsec\TSalida.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -244,21 +246,13 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://cerezo/webservices40/SIeWssec.asmx/">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WiewSsec\</RelPath>
-      <UpdateFromURL>http://cerezo/webservices40/SIeWssec.asmx/</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>WSFAPIUNI_WiewSsec_SIEWSSEC</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:1336/SFaFactu.asmx%3fWSDL">
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://consulss/webservices40/SFaFactu.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WsFaFactu\</RelPath>
-      <UpdateFromURL>http://localhost:1336/SFaFactu.asmx%3fWSDL</UpdateFromURL>
+      <UpdateFromURL>http://consulss/webservices40/SFaFactu.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -266,9 +260,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WSFAPIUNI_WsFaFactu_SFAFACTU</CachedSettingsPropName>
     </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WebReferenceUrl Include="http://consulss/webservices40/SIeWssec.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WiewSsec\</RelPath>
+      <UpdateFromURL>http://consulss/webservices40/SIeWssec.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WSFAPIUNI_WiewSsec_SIEWSSEC</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

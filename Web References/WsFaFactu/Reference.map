@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:1336/SFaFactu.asmx?WSDL" filename="SFaFactu.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://consulss/webservices40/SFaFactu.asmx?wsdl" filename="SFaFactu.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://consulss/webservices40/SFaFactu.asmx?disco" filename="SFaFactu.disco" />
   </Results>
 </DiscoveryClientResultsFile>

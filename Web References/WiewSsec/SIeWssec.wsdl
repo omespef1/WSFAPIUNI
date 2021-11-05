@@ -1496,16 +1496,16 @@
   </wsdl:binding>
   <wsdl:service name="SIEWSSEC">
     <wsdl:port name="SIEWSSECSoap" binding="tns:SIEWSSECSoap">
-      <soap:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+      <soap:address location="http://consulss/webservices40/SIeWssec.asmx" />
     </wsdl:port>
     <wsdl:port name="SIEWSSECSoap12" binding="tns:SIEWSSECSoap12">
-      <soap12:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+      <soap12:address location="http://consulss/webservices40/SIeWssec.asmx" />
     </wsdl:port>
     <wsdl:port name="SIEWSSECHttpGet" binding="tns:SIEWSSECHttpGet">
-      <http:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+      <http:address location="http://consulss/webservices40/SIeWssec.asmx" />
     </wsdl:port>
     <wsdl:port name="SIEWSSECHttpPost" binding="tns:SIEWSSECHttpPost">
-      <http:address location="http://cerezo/seven/webservices40/SIeWssec.asmx" />
+      <http:address location="http://consulss/webservices40/SIeWssec.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
